@@ -33,6 +33,29 @@
 				font-size: 16px;
 			}
 
+			.video-container {
+				display: flex;
+				justify-content: space-around; /* 中等间距分布 */
+				flex-wrap: wrap; /* 响应式布局，小屏幕时自动换行 */
+				gap: 30px; /* 视频之间的间距 */
+				margin: 20px 0;
+			}
+
+			.video-item {
+				text-align: center;
+			}
+
+			.video-item video {
+				border-radius: 8px;
+				box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+			}
+
+			figcaption {
+				margin-top: 10px;
+				font-size: 16px;
+				font-weight: 500;
+				color: #333;
+			}
 		</style>
 
 	</head>
@@ -150,17 +173,45 @@
 										AI agents can learn from this treasure trove of knowledge to harvest actionable insights, acquire diverse skills,
 										develop complex strategies, and discover interesting objectives to pursue.
 										All our databases are open-access and available to download today! Click on each card below to find out more.</p>
-									<div style="width: 100%;height: 100px;text-align:center;">
-										<button style="width:300px;">
-											<img src="../img.png" alt="示例图">
-											730K Youtube videos with 2.2B words in English transcripts</button>
-										<button style="width:300px;">
-											<img src="../img.png" alt="示例图">
-											730K Youtube videos with 2.2B words in English transcripts</button>
-										<button style="width:300px;">
-											<img src="../img.png" alt="示例图">
-											730K Youtube videos with 2.2B words in English transcripts</button>
+									<div class="team-members">
+										<figure class="member">
+											<img src="../img/team.jpg" alt="Figure1" width="200">
+											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
+										</figure>
+										<figure class="member">
+											<img src="../img/team.jpg" alt="Figure1" width="200">
+											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
+										</figure>
+										<figure class="member">
+											<img src="../img/team.jpg" alt="Figure1" width="200">
+											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
+										</figure>
 									</div>
+
+									<h3>Massively Multitask Benchmarking Suite</h3>
+									<div class="video-container">
+										<figure class="video-item">
+											<video controls width="300">
+												<source src="images/output-2drone-bear.mp4" type="video/mp4">
+											</video>
+											<figcaption>Task A</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="300">
+												<source src="images/output-2drone-bear.mp4" type="video/mp4">
+											</video>
+											<figcaption>Task B</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="300">
+												<source src="images/output-2drone-bear.mp4" type="video/mp4">
+											</video>
+											<figcaption>Task C</figcaption>
+										</figure>
+									</div>
+
 
 									<hr>
 									<h3>Team</h3>
@@ -186,10 +237,7 @@
 											<figcaption>Wei Liu</figcaption>
 										</figure>
 									</div>
-									<strong>Email lead developers.   * Equal contribution.   † Equal advising.</strong>
-
-									<h3>Check out our paper</h3>
-
+									<strong><i class="fa fa-envelope"></i> lead developers.   * Equal contribution.   † Equal advising.</strong>
 								</article>
 							<div style="display: flex; justify-content: flex-end; align-items: flex-end; min-height: 100px;">
 								<div style="font-size: medium; margin-right: 1em;">
