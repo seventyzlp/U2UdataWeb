@@ -69,6 +69,15 @@
 			html {
 				scroll-behavior: smooth;
 			}
+
+			.citation{
+				border-left: 4px solid #3498db; /* 左侧蓝色边框 */
+				background-color: #f8f9fa;     /* 浅灰色背景 */
+				padding: 12px 15px;            /* 内边距 */
+				margin: 10px 0;                /* 外边距 */
+				font-family: "Times New Roman", serif; /* 学术风格字体 */
+				line-height: 1.6;              /* 行高 */
+			}
 		</style>
 
 	</head>
@@ -87,10 +96,10 @@
 							<nav id="nav">
 								<ul>
 									<li><a class="icon solid fa-home" href="index.html"><span>Overview</span></a></li>
-									<li><a class="icon solid fa-file" href="left-sidebar.html"><span>Paper</span></a></li>
-									<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>KnowLedge Base</span></a></li>
+									<li><a class="icon solid fa-file" href="https://dl.acm.org/doi/10.1145/3664647.3681151"><span>Dataset</span></a></li>
+									<li><a class="icon solid fa-file" href="https://dl.acm.org/doi/10.1145/3664647.3684995"><span>Simulator</span></a></li>
 									<li><a class="icon solid fa-code-branch" href="https://github.com/fengtt42/U2UData"><span>GitHub</span></a></li>
-									<li><a class="icon solid fa-sitemap" href="index.html"><span>Docs</span></a></li>
+									<li><a class="icon solid fa-sitemap" href="https://github.com/fengtt42/Awesome-Autonomous-Embodied-AI-from-Scratch"><span>survey</span></a></li>
 									<li><a class="icon solid fa-paper-plane" href="#team"><span>Team</span></a></li>
 								</ul>
 							</nav>
@@ -119,11 +128,14 @@
 
 									<span class="image featured"><img src="images/abstract.png" alt="" /></span>
 
-									<h2>Simulator Environments</h2>
+									<div style="background-color: #d5d5d5;text-align: center">
+										<h2><strong>Simulator Environments</strong></h2>
+									</div>
+
 									<div class="video-container">
 										<figure class="video-item">
 											<video controls width="600">
-												<source src="images/OverView.mp4" type="video/mp4">
+												<source src="images/OverView.mp4#t=1" type="video/mp4">
 											</video>
 											<figcaption>Overview</figcaption>
 										</figure>
@@ -197,7 +209,9 @@
 										</figure>
 									</div>
 
-									<h2>Simulator Demo</h2>
+									<div style="background-color: #d5d5d5;text-align: center">
+									<h2><strong>Simulator Demo</strong></h2>
+									</div>
 									<div class="video-container">
 										<figure class="video-item">
 											<video controls width="400">
@@ -221,8 +235,9 @@
 										</figure>
 									</div>
 
-									<h2>Dataset</h2>
-
+									<div style="background-color: #d5d5d5;text-align: center">
+									<h2><strong>Dataset</strong></h2>
+									</div>
 									<div class="video-container">
 										<figure class="video-item" >
 											<img src="images/drone.png" alt="Figure1" width="500">
@@ -234,7 +249,6 @@
 										</figure>
 									</div>
 
-									<h4>Fly Types</h4>
 									<div class="video-container">
 										<figure class="video-item" >
 											<img src="images/FlyTypeA.png" alt="Figure1" width="400">
@@ -255,7 +269,11 @@
 									<p>the first large-scale cooperative perception dataset for swarm UAVs autonomous fligh.
 										It comprises 315K LiDAR frames, 945K RGB and depth frames, and 2.41M annotated 3D bounding boxes for 3 classes.
 										It also includes brightness, temperature, humidity, smoke, and airflow values covering all flight routes. </p>
-									<h2>Data analysis</h2>
+
+									<div style="background-color: #d5d5d5;text-align: center">
+									<h2><strong>Data analysis</strong></h2>
+									</div>
+
 									<div class="video-container">
 										<figure class="video-item" >
 											<img src="images/pic02.jpg" alt="Figure1" width="400">
@@ -273,7 +291,10 @@
 
 
 <!--									<img src="images/dataana.png" height="5448" width="8192"/>-->
-									<h2>Benchmark</h2>
+									<div style="background-color: #d5d5d5;text-align: center">
+									<h2><strong>Benchmark</strong></h2>
+									</div>
+
 									<p>multimodal cooperative 3D object detection and multimodal cooperative 3D object tracking.
 										We have provided 8 state-of-the-art cooperative perception algorithms for benchmarking,
 										and will make all the data, benchmarks, and models publicly available worldwide.</p>
@@ -297,21 +318,25 @@
 										</figure>
 									</div>
 
+									<div style="background-color: #d5d5d5;text-align: center">
+									<h2><strong>Cite</strong></h2>
+									</div>
 
-									<h2>Cite</h2>
-									<pre>
-									@inproceedings{10.1145/3664647.3681151,
-									author = {Feng, Tongtong and Wang, Xin and Han, Feilin and Zhang, Leping and Zhu, Wenwu},
-									title = {U2UData: A Large-scale Cooperative Perception Dataset for Swarm UAVs Autonomous Flight},
-									year = {2024},
-									booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},
-									pages = {7600–7608},
-									numpages = {9}
+									<div class="citation">
+									@inproceedings{10.1145/3664647.3681151,<br>
+									author = {Feng, Tongtong and Wang, Xin and Han, Feilin and Zhang, Leping and Zhu, Wenwu},<br>
+									title = {U2UData: A Large-scale Cooperative Perception Dataset for Swarm UAVs Autonomous Flight},<br>
+									year = {2024},<br>
+									booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},<br>
+									pages = {7600–7608},<br>
+									numpages = {9}<br>
 									}
-									</pre>
+									</div>
 
 									<hr>
-									<h2>Team</h2>
+									<div style="background-color: #d5d5d5;text-align: center">
+									<h2><strong>Team</strong></h2>
+									</div>
 									<div id="team" class="team-members">
 										<figure class="member">
 											<img src="images/ftt.png" alt="People1" width="200">
