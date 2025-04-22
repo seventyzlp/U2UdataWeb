@@ -36,6 +36,7 @@
 			.video-container {
 				display: flex;
 				justify-content: space-around; /* 中等间距分布 */
+				place-items: center; /* 水平和垂直居中 */
 				flex-wrap: wrap; /* 响应式布局，小屏幕时自动换行 */
 				gap: 30px; /* 视频之间的间距 */
 				margin: 20px 0;
@@ -43,6 +44,7 @@
 
 			.video-item {
 				text-align: center;
+				place-items: center;
 			}
 
 			.video-item video {
@@ -87,7 +89,7 @@
 									<li><a class="icon solid fa-home" href="index.html"><span>Overview</span></a></li>
 									<li><a class="icon solid fa-file" href="left-sidebar.html"><span>Paper</span></a></li>
 									<li><a class="icon solid fa-cog" href="left-sidebar.html"><span>KnowLedge Base</span></a></li>
-									<li><a class="icon solid fa-code-branch" href="right-sidebar.html"><span>GitHub</span></a></li>
+									<li><a class="icon solid fa-code-branch" href="https://github.com/fengtt42/U2UData"><span>GitHub</span></a></li>
 									<li><a class="icon solid fa-sitemap" href="index.html"><span>Docs</span></a></li>
 									<li><a class="icon solid fa-paper-plane" href="#team"><span>Team</span></a></li>
 								</ul>
@@ -116,107 +118,86 @@
 										Bottom right: Swarm UAVs cooperative perception benchmark.</p>
 
 									<span class="image featured"><img src="images/abstract.png" alt="" /></span>
-									<h3>Simulator</h3>
-									<h4>Downloading</h4>
-									<p>The simulator, config files, and control code can be downloaded from google drive.</p>
 
-									<blockquote> In case you suffer from downloading large files, you can email me and I will send you the Baidu Cloud link to download.
-									If you want to download the Windows version or the development version, please email me.</blockquote>
-
-									<h4>Quick Start</h4>
-									<p>Compiling tests passed on Ubuntu 20.04 with ros-noetic installed.
-										You can just execute the following commands one by one.</p>
-									<blockquote>For detailed operating instructions, please read the readme.md file carefully.</blockquote>
-									<blockquote># Download the Simulator and run it
-										cd ./Linux_Fin
-										mkdir ~/Documents/AirSim
-										cp settings.json ~/Documents/AirSim
-										./Landscape.sh
-										# Play UAV using a visual control interface
-										sudo apt-get install ros-noetic-desktop-full
-										sudo apt-get install ros-noetic-geographic-msgs, ros-noetic-tf2-geometry-msgs, ros-noetic-tf2-sensor-msgs, ros-noetic-image-transport
-										sudo apt-get install python3-catkin-tools
-										cd ./AirDrone
-										pip install PyQt5 keyboard numpy msgpack-rpc-python
-										python AirDroneClient.py</blockquote>
-
-									<h4>Acknowledgements</h4>
-									<p>This U2USim can extend to multi-sensor fusion, swarm navigation, and swarm tracking tasks.</p>
-									<ul>
-										<li>ros-noetic</li>
-										<li>ubuntu20.04</li>
-										<li>NVIDIA RTX4090TI gpu (version：535.146.02)</li>
-										<li>INTEL I5 12th CPU</li>
-									</ul>
-									<blockquote>More details can be found in our paper.</blockquote>
-
-
-									<h3>Dataset Downloading</h3>
-									<span class="image featured"><img src="/images/21.png" alt="" /></span>
-									<p>All the data can be downloaded from google drive.
-										If you have a good internet, you can directly download the complete large zip file such as train.zip.
-										In case you suffer from downloading large files, we also split each data set into small chunks,
-										which can be found in the directory ending with _chunks, such as train_chunks. After downloading,
-										please run the following command to each set to merge those chunks together:</p>
-									<blockquote>cat train.zip.part* > train.zip
-										unzip train.zip</blockquote>
-
-									<h3>Benchmark</h3>
-									<p>Nullam dolore etiam sed massa id in, tristique at erat lorem
-									ipsum dolor sit amet lorem ipsum sed consequat magna tempus veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna.</p>
-
+									<h2>Simulator Environments</h2>
 									<div class="video-container">
+										<figure class="video-item">
+											<video controls width="600">
+												<source src="images/OverView.mp4" type="video/mp4">
+											</video>
+											<figcaption>Overview</figcaption>
+										</figure>
+
 										<figure class="video-item" >
-											<img src="images/24.png" alt="Figure1" width="500">
-											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
-										</figure>
-										<figure class="video-item">
-											<img src="images/25.png" alt="Figure1" width="500">
-											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
-										</figure>
-										<figure class="video-item">
-											<img src="images/26.png" alt="Figure1" width="500">
-											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
+											<img src="images/1-2.png" alt="Figure1" width="700">
+											<figcaption>Landcsape</figcaption>
 										</figure>
 									</div>
 
-									<p>Sed massa id justo mattis pharetra. Fusce suscipit
-									ligula vel quam viverra sit amet mollis tortor congue. Sed quis mauris
-									sit amet magna accumsan tristique. Curabitur leo nibh, rutrum eu malesuada
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									in, tristique at erat lorem ipsum dolor sit amet lorem ipsum sed consequat
-									magna tempus veroeros lorem sed tempus aliquam lorem ipsum veroeros
-									consequat magna tempus lorem ipsum consequat Phasellus laoreet massa id
-									justo mattis pharetra. Fusce suscipit ligula vel quam viverra sit amet
-									mollis tortor congue. Sed quis mauris sit amet magna accumsan.</p>
-
-									<h3>Internet-scale Knowledge Base</h3>
-									<p>
-										Minecraft has more than 100M active players, who have collectively generated an enormous wealth of data.
-										MineDojo features a massive database collected automatically from the internet.
-										AI agents can learn from this treasure trove of knowledge to harvest actionable insights, acquire diverse skills,
-										develop complex strategies, and discover interesting objectives to pursue.
-										All our databases are open-access and available to download today! Click on each card below to find out more.</p>
 									<div class="video-container">
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/sunny.mp4" type="video/mp4">
+											</video>
+											<figcaption>Sunny</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/rain.mp4" type="video/mp4">
+											</video>
+											<figcaption>Rain</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/snow.mp4" type="video/mp4">
+											</video>
+											<figcaption>Snow</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/dust.mp4" type="video/mp4">
+											</video>
+											<figcaption>Dust</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/fog.mp4" type="video/mp4">
+											</video>
+											<figcaption>Fog</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/thunder.mp4" type="video/mp4">
+											</video>
+											<figcaption>Thunder</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/overcast.mp4" type="video/mp4">
+											</video>
+											<figcaption>Wind</figcaption>
+										</figure>
+
+										<figure class="video-item">
+											<video controls width="400">
+												<source src="images/lake.mp4" type="video/mp4">
+											</video>
+											<figcaption>Lake Side</figcaption>
+										</figure>
+
 										<figure class="video-item" >
-											<img src="images/1-2-3.png" alt="Figure1" width="300">
-											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
-										</figure>
-										<figure class="video-item">
-											<img src="images/1-2-3.png" alt="Figure1" width="300">
-											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
-										</figure>
-										<figure class="video-item">
-											<img src="images/1-2-3.png" alt="Figure1" width="300">
-											<figcaption>730K YouTube videos with 2.2B words in English transcripts</figcaption>
+											<img src="images/LandScape.jpg" alt="Figure1" width="410">
+											<figcaption>Landcsape</figcaption>
 										</figure>
 									</div>
 
-									<h3>Massively Multitask Benchmarking Suite</h3>
+									<h2>Simulator Demo</h2>
 									<div class="video-container">
 										<figure class="video-item">
 											<video controls width="400">
@@ -240,94 +221,124 @@
 										</figure>
 									</div>
 
-									<h3>Dynamic System</h3>
+									<h2>Dataset</h2>
+
 									<div class="video-container">
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/OverView.mp4" type="video/mp4">
-											</video>
-											<figcaption>Overview</figcaption>
+										<figure class="video-item" >
+											<img src="images/drone.png" alt="Figure1" width="500">
+											<figcaption>Drone module</figcaption>
 										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/sunny.mp4" type="video/mp4">
-											</video>
-											<figcaption>Sunny</figcaption>
-										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/dust.mp4" type="video/mp4">
-											</video>
-											<figcaption>Dust</figcaption>
-										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/overcast.mp4" type="video/mp4">
-											</video>
-											<figcaption>Overcast</figcaption>
-										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/overcast.mp4" type="video/mp4">
-											</video>
-											<figcaption>Overcast</figcaption>
-										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/rain.mp4" type="video/mp4">
-											</video>
-											<figcaption>Rain</figcaption>
-										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/fog.mp4" type="video/mp4">
-											</video>
-											<figcaption>Fog</figcaption>
-										</figure>
-
-										<figure class="video-item">
-											<video controls width="400">
-												<source src="images/lake.mp4" type="video/mp4">
-											</video>
-											<figcaption>Lake</figcaption>
+										<figure class="video-item" >
+											<img src="images/22.png" alt="Figure1" width="700">
+											<figcaption>Sensor Types</figcaption>
 										</figure>
 									</div>
+
+									<h4>Fly Types</h4>
+									<div class="video-container">
+										<figure class="video-item" >
+											<img src="images/FlyTypeA.png" alt="Figure1" width="400">
+											<figcaption>FlyTypeA</figcaption>
+										</figure>
+										<figure class="video-item" >
+											<img src="images/FlyTypeB.png" alt="Figure1" width="400">
+											<figcaption>FlyTypeB</figcaption>
+										</figure>
+										<figure class="video-item" >
+											<img src="images/FlyTypeC.png" alt="Figure1" width="400">
+											<figcaption>FlyTypeC</figcaption>
+										</figure>
+									</div>
+
+
+
+									<p>the first large-scale cooperative perception dataset for swarm UAVs autonomous fligh.
+										It comprises 315K LiDAR frames, 945K RGB and depth frames, and 2.41M annotated 3D bounding boxes for 3 classes.
+										It also includes brightness, temperature, humidity, smoke, and airflow values covering all flight routes. </p>
+									<h2>Data analysis</h2>
+									<div class="video-container">
+										<figure class="video-item" >
+											<img src="images/pic02.jpg" alt="Figure1" width="400">
+											<figcaption>A</figcaption>
+										</figure>
+										<figure class="video-item" >
+											<img src="images/pic03.jpg" alt="Figure1" width="400">
+											<figcaption>B</figcaption>
+										</figure>
+										<figure class="video-item" >
+											<img src="images/pic01.jpg" alt="Figure1" width="400">
+											<figcaption>C</figcaption>
+										</figure>
+									</div>
+
+
+<!--									<img src="images/dataana.png" height="5448" width="8192"/>-->
+									<h2>Benchmark</h2>
+									<p>multimodal cooperative 3D object detection and multimodal cooperative 3D object tracking.
+										We have provided 8 state-of-the-art cooperative perception algorithms for benchmarking,
+										and will make all the data, benchmarks, and models publicly available worldwide.</p>
+									<div class="video-container">
+										<figure class="video-item" >
+											<img src="images/1-3.png" alt="Figure1" width="800">
+										</figure>
+									</div>
+									<div class="video-container">
+										<figure class="video-item" >
+											<img src="images/24.png" alt="Figure1" width="400">
+											<figcaption>Synchronous 3D object detection</figcaption>
+										</figure>
+										<figure class="video-item">
+											<img src="images/25.png" alt="Figure1" width="400">
+											<figcaption>Asynchronous 3D object detection</figcaption>
+										</figure>
+										<figure class="video-item">
+											<img src="images/26.png" alt="Figure1" width="400">
+											<figcaption>Cooperative Tracking benchmark</figcaption>
+										</figure>
+									</div>
+
+
+									<h2>Cite</h2>
+									<pre>
+									@inproceedings{10.1145/3664647.3681151,
+									author = {Feng, Tongtong and Wang, Xin and Han, Feilin and Zhang, Leping and Zhu, Wenwu},
+									title = {U2UData: A Large-scale Cooperative Perception Dataset for Swarm UAVs Autonomous Flight},
+									year = {2024},
+									booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},
+									pages = {7600–7608},
+									numpages = {9}
+									}
+									</pre>
 
 									<hr>
-									<h3>Team</h3>
+									<h2>Team</h2>
 									<div id="team" class="team-members">
 										<figure class="member">
-											<img src="images/ZJZ.jpg" alt="People1" width="200">
-											<figcaption>Ming Zhang</figcaption>
+											<img src="images/ftt.png" alt="People1" width="200">
+											<figcaption>Tongtong Feng</figcaption>
 										</figure>
 										<figure class="member">
-											<img src="images/ZJZ.jpg" alt="People2" width="200">
-											<figcaption>Hua Li</figcaption>
+											<img src="images/wx.jpg" alt="People2" width="200">
+											<figcaption>Xin Wang</figcaption>
 										</figure>
 										<figure class="member">
-											<img src="images/ZJZ.jpg" alt="People3" width="200">
-											<figcaption>Fang Wang</figcaption>
+											<img src="images/Fiona.jpg" alt="People3" width="200">
+											<figcaption>Feilin Han</figcaption>
 										</figure>
 										<figure class="member">
-											<img src="images/ZJZ.jpg" alt="People4" width="200">
-											<figcaption>Qiang Zhao</figcaption>
+											<img src="images/zlp.jpg" alt="People4" width="200">
+											<figcaption>Leping Zhang</figcaption>
 										</figure>
 										<figure class="member">
-											<img src="images/ZJZ.jpg" alt="People5" width="200">
-											<figcaption>Wei Liu</figcaption>
+											<img src="images/zww.jpg" alt="People5" width="200">
+											<figcaption>Wenwu Zhu</figcaption>
 										</figure>
 									</div>
-									<strong><i class="fa fa-envelope"></i> lead developers.   * Equal contribution.   † Equal advising.</strong>
+<!--									<strong><i class="fa fa-envelope"></i> lead developers.   * Equal contribution.   † Equal advising.</strong>-->
 								</article>
 							<div style="display: flex; justify-content: flex-end; align-items: flex-end; min-height: 100px;">
 								<div style="font-size: medium; margin-right: 1em;">
-									<p>OURteam ©2025</p>
+									<p>AEAI Lab ©2025</p>
 								</div>
 							</div>
 						</div>
